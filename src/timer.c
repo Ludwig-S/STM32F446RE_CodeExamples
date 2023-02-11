@@ -1,7 +1,7 @@
 #include "stm32f4xx.h"                  // Device header
 #include <stdint.h>
 
-// pscVal is the number of prescaler ticks, arrVal the number of auto reload register ticks
+// pscTicks is the number of prescaler ticks, arrTicks the number of auto reload register ticks
 // the resulting timer period tim_per with a clock frequency of f_clk is equal to: 
 // tim_per = pscTicks * arrTicks / f_clk
 void timer2_init(uint16_t pscTicks, uint32_t arrTicks)
