@@ -26,13 +26,10 @@ void main()
 	usart2_init();
 	char c;
 	
+
+
 	while(1)
 	{
-		c = usart2_readChar();
-		if (c != '\0')
-		{
-			usart2_writeChar(c);
-		}
 		
 	}
 }

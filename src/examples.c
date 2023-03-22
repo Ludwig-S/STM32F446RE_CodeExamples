@@ -76,7 +76,7 @@ void run_inputCaptureTest(void)
 		{	// print timestamp via USART2
 			timeStamp = TIM3->CCR1;
 			sprintf(printString, "\n%ld ms", timeStamp);
-			usart2_printString(printString);
+			usart2_writeString(printString);
 		}
 	}
 }
