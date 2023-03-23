@@ -28,3 +28,9 @@ uint32_t SysTick_waitTicks(uint32_t ticks)
   while (!(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk));            /* wait until timer finished */
   return (0UL);                                                     /* Function successful */
 }
+
+void waitSeconds(int seconds) {
+  // 180 MHz
+  // => value of 180e6 = 1 second
+  SysTick_waitTicks((int)(seconds*180e6));
+}

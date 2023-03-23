@@ -17,3 +17,4 @@ void timer2_init(uint16_t pscTicks, uint32_t arrTicks)
 void sysTick_init(uint32_t reloadValue) {
     SysTick->LOAD = reloadValue;
 }
+

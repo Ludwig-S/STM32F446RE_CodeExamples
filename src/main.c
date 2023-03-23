@@ -21,6 +21,7 @@ uint8_t setString_SafeString(struct SafeString safeStringInstance, char* string)
 	}
 }
 
+#ifndef PIO_UNIT_TESTING
 void main()
 {
 	usart2_init();
@@ -33,3 +34,4 @@ void main()
 		
 	}
 }
+#endif

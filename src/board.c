@@ -22,7 +22,7 @@ void boardLED_reset(void)
 	GPIOA->BSRR |= GPIO_BSRR_BR5;
 }
 
-int32_t boardLED_getState(void)
+uint32_t boardLED_getState(void)
 {
 	return GPIOA->ODR & GPIO_ODR_OD5; // return output state of PA5
 }
@@ -45,7 +45,7 @@ void boardButton_init(void)
 }
 
 
-int32_t boardButton_pressed(void)
+uint32_t boardButton_pressed(void)
 {
 	// not pressed = high; pressed = low
 	return !(GPIOC->IDR & GPIO_IDR_ID13);
