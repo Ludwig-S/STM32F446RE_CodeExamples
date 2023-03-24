@@ -29,7 +29,7 @@ void unity_usart2_init(void)
 	USART2->CR1 |= USART_CR1_UE;// enable USART2 module
 }
 
-
+// unity functions:
 void unityOutputStart()
 {
     unity_usart2_init();
