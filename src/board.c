@@ -24,7 +24,7 @@ void boardLED_reset(void)
 
 uint32_t boardLED_getState(void)
 {
-	return GPIOA->ODR & GPIO_ODR_OD5; // return output state of PA5
+	return (GPIOA->ODR & GPIO_ODR_OD5) >> GPIO_ODR_OD5_Pos; // return output state of PA5
 }
 
 void boardLED_toggle(void)

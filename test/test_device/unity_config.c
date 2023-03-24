@@ -13,6 +13,7 @@
 
 #include "unity_config.h"
 #include "stm32f4xx.h"
+#include "usart.h"
 
 void unity_usart2_init(void)
 {
@@ -29,13 +30,6 @@ void unity_usart2_init(void)
 }
 
 
-void unity_usart2_writeChar(char msg_char)
-{
-	while(!(USART2->SR & USART_SR_TXE)); // wait while transmit data register is full (register empty => TXE=1)
-	USART2->DR = (uint8_t) msg_char; // write char in data register
-}
-
-
 void unityOutputStart()
 {
     unity_usart2_init();
@@ -43,7 +37,7 @@ void unityOutputStart()
 
 void unityOutputChar(char c)
 {
-    unity_usart2_writeChar(c);
+    usart2_writeChar(c);
 }
 
 void unityOutputFlush(){}
