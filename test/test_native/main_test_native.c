@@ -6,7 +6,7 @@ void test_dummyTest_assertion_true(void){
 }
 
 void test_dummyTest_message_true(void) {
-  TEST_ASSERT_MESSAGE( 1 == 1 , "This string will not get printed ;)");
+  TEST_ASSERT_MESSAGE( 1 == 1 , "This error message will not get printed ;)");
 }
 
 void test_dummyTest_assertion_false(void){
