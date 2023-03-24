@@ -160,7 +160,7 @@ void run_controlBoardLEDWithBoardButton(void)
 	while(1)
 	{
 		board_lightLEDIfButtonIsPressed();
-		usart2_writeString_oncePerBoardButtonPress("Hallo Robert :)\n");
+		usart2_writeString_oncePerBoardButtonPress("Hallo :)\n");
 	}
 }
 
